@@ -32,7 +32,6 @@
                     <option value="overig">Overig</option>
                 </select>
             </div>
-            
             <div class="form-group">
                 <label for="capaciteit">Capaciteit p/uur:</label>
                 <input type="number" min="0" name="capaciteit" id="capaciteit" class="form-input">
