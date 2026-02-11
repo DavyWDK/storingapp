@@ -4,6 +4,7 @@
 $attractie = $_POST['attractie'];
 $type = $_POST['type'];
 $capaciteit = $_POST['capaciteit'];
+$prioriteit = isset($_POST['prioriteit']) ? true : false;
 $melder = $_POST['melder'];
 
 //1. Verbinding
