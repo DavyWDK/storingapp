@@ -5,8 +5,6 @@ $attractie = $_POST['attractie'];
 $capaciteit = $_POST['capaciteit'];
 $melder = $_POST['melder'];
 
-echo $attractie . " / " . $capaciteit . " / " . $melder;
-
 //1. Verbinding
 require_once '../../../config/conn.php';
 
@@ -22,3 +20,6 @@ $statement->execute([
     ':capaciteit' => $capaciteit,
     ':melder' => $melder
 ]);
+
+//5. Redirect
+header("Location: ../meldingen/index.php?msg=Melding opgeslagen");
