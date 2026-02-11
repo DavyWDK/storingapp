@@ -14,10 +14,18 @@ if(empty($attractie))
 {
  $errors[] = "Vul de attractie-naam in.";
 }
+if(empty($type))
+{
+ $errors[] = "Vul het type attractie in.";
+}
 $capaciteit = $_POST['capaciteit'];
 if(!is_numeric($capaciteit))
 {
  $errors[] = "Vul voor capaciteit een geldig getal in.";
+}
+if(empty($melder))
+{
+ $errors[] = "Vul de naam van de melder in.";
 }
 if(isset($errors))
 {
