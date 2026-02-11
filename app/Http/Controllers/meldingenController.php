@@ -8,6 +8,24 @@ $prioriteit = isset($_POST['prioriteit']) ? true : false;
 $melder = $_POST['melder'];
 $overige_info = $_POST['overige_info'];
 
+//Error handling
+$attractie = $_POST['attractie'];
+if(empty($attractie))
+{
+ $errors[] = "Vul de attractie-naam in.";
+}
+$capaciteit = $_POST['capaciteit'];
+if(!is_numeric($capaciteit))
+{
+ $errors[] = "Vul voor capaciteit een geldig getal in.";
+}
+if(isset($errors))
+{
+ var_dump($errors);
+ die();
+}
+
+
 //1. Verbinding
 require_once '../../../config/conn.php';
 
